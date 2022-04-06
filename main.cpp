@@ -11,11 +11,41 @@
 using namespace std;
 
 
+
 int main()
 
 {
 
-      const int CITY = 2;
+
+
+
+  const int city = 2;
+  const int days = 7;
+
+  int** forecast = new int*[city];
+  for(int i = 0; i < city; i++)
+    {
+      forecast[i] = new int[days];
+    }
+
+forecast[0][0] = 71;
+forecast[0][1] = 86;
+forecast[0][2] = 87;
+forecast[0][3] = 85;
+forecast[0][4] = 89;
+forecast[0][5] = 89;
+forecast[0][6] = 78;
+forecast[1][0] = 80;
+forecast[1][1] = 87;
+forecast[1][2] = 83;
+forecast[1][3] = 86;
+forecast[1][4] = 89;
+forecast[1][5] = 90;
+forecast[1][6] = 83;
+
+  
+  
+     /* const int CITY = 2;
 
       const int WEEK = 7;
 
@@ -51,14 +81,8 @@ int main()
 
     }
 
-
+    cout << "Your Citys' Weekly Forecast:" << endl;
  
-
-  /* cout << "\n\nDisplaying Values:\n";
-
- 
-
-    // Accessing the values from the temperature array
 
     for (int i = 0; i < CITY; ++i)
 
@@ -68,11 +92,17 @@ int main()
 
         {
 
-            cout << "City " << i + 1 << ", Day " << j + 1 << " = " << temperature[i][j] << endl;
+            if(i == 0)
+            {
+              cout << "Arlington"
+            }
 
         }
 
     }
+
+
+  
 
    /*For up to 5 Points Extra Credit
 
