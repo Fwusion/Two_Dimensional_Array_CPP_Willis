@@ -21,8 +21,11 @@ int main()
 
   const int city = 2;
   const int days = 7;
-
   int** forecast = new int*[city];
+  string color = "\x1b[" + to_string(31) + ";1m";
+  string color2 = "\x1b[" + to_string(34) + ";1m";
+  string reset = "\x1b[0m";
+  
   for(int i = 0; i < city; i++)
     {
       forecast[i] = new int[days];
@@ -45,7 +48,7 @@ forecast[1][6] = 83;
    
 
 
-    cout << "\nApril 8th to 14th Weekly Forecast:" << endl;
+    cout << color2 << "\nApril 8th to 14th Weekly Forecast:" << reset << endl;
  
 
     for (int i = 0; i < city; ++i)
@@ -65,7 +68,7 @@ forecast[1][6] = 83;
               cout << "Austin, ";
             }
 
-          cout << "Day " << i + 1 << " : " << forecast[i][j] << endl;
+          cout << "Day " << i + 1 << " : " << color << forecast[i][j] << reset << endl;
 
         }
 
